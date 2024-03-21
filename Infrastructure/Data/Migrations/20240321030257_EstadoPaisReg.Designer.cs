@@ -3,6 +3,7 @@ using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(InventarioContext))]
-    partial class InventarioContextModelSnapshot : ModelSnapshot
+    [Migration("20240321030257_EstadoPaisReg")]
+    partial class EstadoPaisReg
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,13 +25,12 @@ namespace Infrastructure.Data.Migrations
             modelBuilder.Entity("Core.Entities.Estado", b =>
                 {
                     b.Property<string>("codEstado")
-                        .ValueGeneratedOnAdd()
                         .HasMaxLength(3)
                         .HasColumnType("varchar(3)")
                         .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("codPais")
-                        .HasColumnType("varchar(3)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("nombreEstado")
                         .IsRequired()
@@ -36,8 +38,6 @@ namespace Infrastructure.Data.Migrations
                         .HasColumnType("varchar(50)");
 
                     b.HasKey("codEstado");
-
-                    b.HasIndex("codPais");
 
                     b.ToTable("Estado", (string)null);
                 });
@@ -88,7 +88,9 @@ namespace Infrastructure.Data.Migrations
                 {
                     b.HasOne("Core.Entities.Pais", "Pais")
                         .WithMany("Estados")
-                        .HasForeignKey("codPais");
+                        .HasForeignKey("codEstado")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Pais");
                 });

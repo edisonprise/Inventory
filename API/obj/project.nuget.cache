@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3dpXCMVRvW5VB4eMWfMObuqS3mFZ5zlvrqWojCk+Nk5wa3nXf4FvccdB3DBLpGlTFQ3G3qxkbfuVGR+RR0/SPA==",
+  "dgSpecHash": "nIp53LdGU8mXztbXNdmOtrSCFEoHENHmJp3Ps/09l/kwFwG4Eft9SegRGeObTHkpDjFNCWaSxoS2fWRiNt8/2w==",
   "success": true,
-  "projectFilePath": "D:\\projectsNetCore\\inventario\\API\\API.csproj",
+  "projectFilePath": "D:\\projectsnetcore\\inventario\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\janus\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\janus\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.16\\microsoft.aspnetcore.openapi.7.0.16.nupkg.sha512",

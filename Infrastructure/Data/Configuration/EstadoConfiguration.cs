@@ -20,6 +20,6 @@ public class EstadoConfiguration : IEntityTypeConfiguration<Estado>
 
         builder.HasOne(p => p.Pais)
         .WithMany(p => p.Estados)
-        .HasForeignKey(p => p.codEstado);
+        .HasForeignKey(p => p.codPais);
     }
 }

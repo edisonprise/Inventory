@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projectsNetCore\\inventario\\Core\\Core.csproj": {}
+    "D:\\projectsnetcore\\inventario\\Core\\Core.csproj": {}
   },
   "projects": {
-    "D:\\projectsNetCore\\inventario\\Core\\Core.csproj": {
+    "D:\\projectsnetcore\\inventario\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projectsNetCore\\inventario\\Core\\Core.csproj",
+        "projectUniqueName": "D:\\projectsnetcore\\inventario\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "D:\\projectsNetCore\\inventario\\Core\\Core.csproj",
+        "projectPath": "D:\\projectsnetcore\\inventario\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\janus\\.nuget\\packages\\",
-        "outputPath": "D:\\projectsNetCore\\inventario\\Core\\obj\\",
+        "outputPath": "D:\\projectsnetcore\\inventario\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\janus\\AppData\\Roaming\\NuGet\\NuGet.Config"
