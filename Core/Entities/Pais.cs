@@ -8,5 +8,5 @@ public class Pais
     [Key]
     public string codPais { get; set; }
     public string nombrePais { get; set; }
-    public ICollection<Estado> Estados { get; set; }
+    public IList<Estado> Estados { get; set; }
 }
