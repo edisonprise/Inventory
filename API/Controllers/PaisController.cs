@@ -22,4 +22,12 @@ public class PaisController : BaseApiController
         var paises = await _context.Paises.ToListAsync();
         return Ok(paises);
     }
+    [HttpGet("{id}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> Get(string id)
+    {
+        var pais = await _context.Paises.FindAsync(id);
+        return Ok(pais);
+    }
 }
